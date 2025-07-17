@@ -39,7 +39,6 @@
         Layer-4-Momentary {
             bindings = <&mo 4>;
             key-positions = <52 55 37 40>;
-            layers = <0>;
         };
     };
 
