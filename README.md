@@ -1,20 +1,17 @@
-# lily58
+# crkbd 
 
-This is the repository for the firmware that runs my lily58 keyboard, built with a typereactive kit.
+![build](https://github.com/johnseth97/corne/.workflows/build.yml/badge.svg)  
 
-The keyboard has a nice!nano v2 controller on each side, and a nice!view screen on each side as well.
+## This is the repository for the firmware that runs my corne 6x3+2 keyboard, built with a typereactive kit.
 
-Currently this repo is quite basic as I familiarize myself with the stock firmware, so I can better identify the sore spots that I want to address.
+## The keyboard has a nice!nano v2 controller on each side, and a nice!view screen on each side as well.
 
-### Keymap:
-![](https://raw.githubusercontent.com/johnseth97/lily58/89e2c0336307a8bc6a850f436184cbc75e1fc204/keymap-drawer/lily58.svg)
-
-### Acknowledgements:
+### Acknowledgements
 
 [nickcoutsos/keymap-editor](https://nickcoutsos.github.io/keymap-editor)
 
 [caksoylar/keymap-drawer](https://github.com/caksoylar/keymap-drawer)
 
+### Keymap
 
-
-
+![](https://raw.githubusercontent.com/johnseth97/lily58/89e2c0336307a8bc6a850f436184cbc75e1fc204/keymap-drawer/lily58.svg)
