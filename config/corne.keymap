@@ -44,6 +44,7 @@
 
     keymap {
         compatible = "zmk,keymap";
+        default_layer = <&default_layer>;
 
         default_layer {
             // ------------------------------------------------------------------------------------------------------------
