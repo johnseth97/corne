@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 / {
     behaviors {
@@ -31,6 +32,20 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
         };
+
+        n2xbld3xres: n2xbld3xres {
+            compatible = "zmk,behavior-tap-dance";
+            label = "N2XBLD3XRES";
+            #binding-cells = <0>;
+            bindings = <&none>, <&bootloader>, <&sys_reset>;
+        };
+
+        L22xMux: L22xMux {
+            compatible = "zmk,behavior-tap-dance";
+            label = "L22XMUX";
+            #binding-cells = <0>;
+            bindings = <&mo 2>, <&kp LC(A)>;
+        };
     };
 
     combos {
@@ -53,10 +68,10 @@
             //                     | GUI  | LOWER|  SPACE |                 | ENTER | RAISE|  ALT  |
 
             bindings = <
-&kp TAB        &kp Q  &kp W  &kp E         &kp R       &kp T        &kp Y      &kp U  &kp I         &kp O       &kp P      &kp ESC
-&kp LCTRL      &kp A  &kp S  &kp D         &kp F       &kp G        &kp H      &kp J  &kp K         &kp L       &kp SEMI   &kp BSPC
-&LSHIFT2xCAPS  &kp Z  &kp X  &kp C         &kp V       &kp B        &kp N      &kp M  &kp COMMA     &kp PERIOD  &kp SLASH  &RSHIFT2xCAPS
-                             &kp LEFT_GUI  &td_numpad  &kp SPACE    &kp ENTER  &mo 2  &kp LEFT_ALT
+&kp TAB        &kp Q  &kp W  &kp E         &kp R       &kp T        &kp Y      &kp U     &kp I         &kp O       &kp P      &kp ESC
+&kp LCTRL      &kp A  &kp S  &kp D         &kp F       &kp G        &kp H      &kp J     &kp K         &kp L       &kp SEMI   &kp BSPC
+&LSHIFT2xCAPS  &kp Z  &kp X  &kp C         &kp V       &kp B        &kp N      &kp M     &kp COMMA     &kp PERIOD  &kp SLASH  &RSHIFT2xCAPS
+                             &kp LEFT_GUI  &td_numpad  &kp SPACE    &kp ENTER  &L22xMux  &kp LEFT_ALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -71,10 +86,10 @@
             //                     |      |      |      |        |  |       |      |       |       |
 
             bindings = <
-&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6          &kp F7             &kp F8     &kp F9          &kp F10         &kp F11   &kp F12
-&kp GRAVE   &kp EXCL      &kp AT        &kp HASH      &kp DOLLAR    &kp PRCNT       &kp CARET          &kp AMPS   &kp ASTRK       &kp LPAR        &kp RPAR  &kp SINGLE_QUOTE
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &ext_power EP_TOG  &kp MINUS  &kp UNDERSCORE  &kp LEFT_BRACE  &kp RBRC  &kp BACKSLASH
-                                        &trans        &trans        &trans          &trans             &trans     &trans
+&kp F1     &kp F2               &kp F3     &kp F4    &kp F5      &kp F6       &kp F7         &kp F8     &kp F9          &kp F10         &kp F11   &kp F12
+&kp GRAVE  &kp EXCL             &kp AT     &kp HASH  &kp DOLLAR  &kp PRCNT    &kp CARET      &kp AMPS   &kp ASTRK       &kp LPAR        &kp RPAR  &trans
+&trans     &kp C_VOICE_COMMAND  &kp GLOBE  &trans    &trans      &kp GRAVE    &kp BACKSLASH  &kp MINUS  &kp UNDERSCORE  &kp LEFT_BRACE  &kp RBRC  &trans
+                                           &trans    &trans      &trans       &trans         &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -124,10 +139,10 @@
             //                            |        |        |        |        |       |       |         |
 
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans         &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP  &kp END
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans    &trans         &trans       &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&bt BT_CLR         &bt BT_SEL 0     &bt BT_SEL 1      &bt BT_SEL 3  &bt BT_SEL 4     &trans       &trans     &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP     &kp END          &trans
+&ext_power EP_TOG  &kp C_PREV       &kp C_VOL_DN      &kp C_VOL_UP  &kp C_NEXT       &mkp LCLK    &mkp RCLK  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP    &mmv MOVE_RIGHT  &trans
+&n2xbld3xres       &kp PAUSE_BREAK  &kp C_PLAY_PAUSE  &trans        &kp PRINTSCREEN  &mkp MB4     &mkp MB5   &trans          &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP     &trans
+                                                      &trans        &trans           &trans       &trans     &trans          &trans
             >;
 
             label = "Util";
