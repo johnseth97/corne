@@ -53,8 +53,8 @@
 
         FN_Momentary {
             bindings = <&mo 4>;
-	    timeout-ms = <50>;
-            key-positions = <38 41>;
+            timeout-ms = <50>;
+            key-positions = <37 40>;
         };
     };
 
