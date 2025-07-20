@@ -32,8 +32,8 @@ jobs:
       - name: Draw keymap
         run: |
           mkdir -p keymap-drawer
-          keymap parse -z config/corne.keymap --output keymap-drawer/corne.keymap.yaml --config keymap_drawer.config.yaml
-          keymap draw keymap-drawer/*.keymap.yaml --output keymap-drawer --config keymap_drawer.config.yaml
+          keymap --config keymap_drawer.config.yaml parse -z config/corne.keymap --output keymap-drawer/corne.keymap.yaml
+          keymap --config keymap_drawer.config.yaml draw keymap-drawer/*.keymap.yaml --output keymap-drawer
 
       - name: Commit and push
         run: |
