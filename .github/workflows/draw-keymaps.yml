@@ -3,7 +3,7 @@ name: 🧩 Draw ZMK Keymaps
 on:
   workflow_dispatch:
   release:
-    types: [published]  # trigger only when a release is published
+    types: [published]
   push:
     paths:
       - "config/*.keymap"
@@ -25,15 +25,16 @@ jobs:
         with:
           python-version: 3.12
 
-      - name: Install keymap-drawer from GitHub
+      - name: Install keymap-drawer and compatible tree-sitter
         run: |
+          pip install tree-sitter==0.20.4
           pip install git+https://github.com/caksoylar/keymap-drawer.git@main
 
       - name: Draw keymap
         run: |
           mkdir -p keymap-drawer
-          keymap  parse -z config/corne.keymap --output keymap-drawer/corne.keymap.yaml
-          keymap  draw keymap-drawer/*.keymap.yaml --output keymap-drawer
+          keymap parse -z config/corne.keymap --output keymap-drawer/corne.keymap.yaml
+          keymap draw keymap-drawer/*.keymap.yaml --output keymap-drawer
 
       - name: Commit and push
         run: |
