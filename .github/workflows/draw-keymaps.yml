@@ -2,6 +2,8 @@ name: 🧩 Draw ZMK Keymaps
 
 on:
   workflow_dispatch:
+  release:
+    types: [published]  # trigger only when a release is published
   push:
     paths:
       - "config/*.keymap"
@@ -13,9 +15,30 @@ permissions:
 
 jobs:
   draw:
-    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
-    with:
-      keymap_patterns: "config/*.keymap"
-      config_path: "keymap_drawer.config.yaml"
-      output_folder: "keymap-drawer"
-      commit_message: "keymap-drawer render"
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: 3.12
+
+      - name: Install keymap-drawer from GitHub
+        run: |
+          pip install git+https://github.com/caksoylar/keymap-drawer.git@main
+
+      - name: Draw keymap
+        run: |
+          mkdir -p keymap-drawer
+          keymap parse config/*.keymap --config keymap_drawer.config.yaml --output keymap-drawer
+          keymap draw keymap-drawer/*.keymap.yaml --config keymap_drawer.config.yaml --output keymap-drawer
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add keymap-drawer
+          git commit -m "keymap-drawer render" || echo "No changes to commit"
+          git push

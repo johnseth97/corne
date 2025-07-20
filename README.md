@@ -23,8 +23,9 @@ The keyboard features:
 
 > Generated with [caksoylar/keymap-drawer](https://github.com/caksoylar/keymap-drawer)
 
-![keymap](keymap-drawer/corne.svg)
+### Keymap
 
+![](https://raw.githubusercontent.com/johnseth97/corne/main/keymap-drawer/corne.svg)
 ---
 
 ## 🙏 Acknowledgements
