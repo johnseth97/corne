@@ -1,17 +1,33 @@
-# crkbd 
+# crkbd
 
-![build](https://github.com/johnseth97/corne/.workflows/build.yml/badge.svg)  
+[![Build Status](https://github.com/johnseth97/corne/actions/workflows/build.yml/badge.svg)](https://github.com/johnseth97/corne/actions/workflows/build.yml)
 
-## This is the repository for the firmware that runs my corne 6x3+2 keyboard, built with a typereactive kit.
+This is the firmware repository for my Corne 6×3+2 split keyboard, built with a [Typeractive](https://www.typeractive.xyz/) kit.
 
-## The keyboard has a nice!nano v2 controller on each side, and a nice!view screen on each side as well.
+The keyboard features:
+- A **nice!nano v2** microcontroller on each half
+- A **nice!view** screen on each half
+- A custom keymap powered by **ZMK Firmware**
 
-### Acknowledgements
+---
 
-[nickcoutsos/keymap-editor](https://nickcoutsos.github.io/keymap-editor)
+## 🔧 Documentation
 
-[caksoylar/keymap-drawer](https://github.com/caksoylar/keymap-drawer)
+- 🛠️ [Typeractive Corne Build Guide](https://docs.typeractive.xyz/builds/corne)
+- 💻 [Typeractive Software Guide](https://docs.typeractive.xyz/software)
+- 📚 [ZMK Documentation](https://zmk.dev/docs)
 
-### Keymap
+---
 
-![](https://raw.githubusercontent.com/johnseth97/lily58/89e2c0336307a8bc6a850f436184cbc75e1fc204/keymap-drawer/lily58.svg)
+## 🎹 Keymap
+
+> Generated with [caksoylar/keymap-drawer](https://github.com/caksoylar/keymap-drawer)
+
+![keymap](keymap-drawer/corne.svg)
+
+---
+
+## 🙏 Acknowledgements
+
+- [nickcoutsos/keymap-editor](https://nickcoutsos.github.io/keymap-editor) – for creating layouts
+- [caksoylar/keymap-drawer](https://github.com/caksoylar/keymap-drawer) – for drawing SVG diagrams from ZMK keymaps
