@@ -2,44 +2,21 @@ name: 🧩 Draw ZMK Keymaps
 
 on:
   workflow_dispatch:
-  release:
-    types: [published]
   push:
     paths:
       - "config/*.keymap"
       - "config/*.dtsi"
       - "keymap_drawer.config.yaml"
 
-permissions:
-  contents: write
-
 jobs:
   draw:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: 3.12
-
-      - name: Install keymap-drawer and compatible tree-sitter
-        run: |
-          pip install tree-sitter==0.20.4
-          pip install git+https://github.com/caksoylar/keymap-drawer.git@main
-
-      - name: Draw keymap
-        run: |
-          mkdir -p keymap-drawer
-          keymap parse -z config/corne.keymap --output keymap-drawer/corne.keymap.yaml
-          keymap draw keymap-drawer/*.keymap.yaml --output keymap-drawer
-
-      - name: Commit and push
-        run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          git add keymap-drawer
-          git commit -m "keymap-drawer render" || echo "No changes to commit"
-          git push
+    uses: caksoylar/keymap-drawer/.github/workflows/draw-zmk.yml@main
+    permissions:
+      contents: write
+    with:
+      keymap_patterns: "config/corne.keymap"
+      output_folder: "keymap-drawer"
+      # Optional: if you want to control layer names, add this (otherwise omit)
+      # parse_args: "corne:'-l Base Lower Raise'"
+      # Optional: to apply rotation or custom layout style
+      # draw_args: "corne:'-k corne_rotated'"
