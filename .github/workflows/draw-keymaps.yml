@@ -17,9 +17,7 @@ jobs:
       keymap_patterns: "config/corne.keymap"
       config_path: "keymap_drawer.config.yaml"
       output_folder: "keymap-drawer"
-      glyph_sources:
-        - material
-        - mdi
+      glyph_sources: mdi
 
       # Optional: if you want to use a custom font, add this (otherwise omit)
       # Optional: if you want to control layer names, add this (otherwise omit)
