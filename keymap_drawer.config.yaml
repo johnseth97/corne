@@ -1,1 +1,7 @@
-dark_mode: auto
+draw_config:
+  dark_mode: auto
+
+  glyph_sources:
+    - mdi
+    - material
+
