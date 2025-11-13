@@ -1,0 +1,9 @@
+/* Config-level override: move bottom row to P0.08 via jumper */
+
+&kscan0 {
+    row-gpios =
+        < &pro_micro 0x4 0x20 >,  /* row 0 - unchanged */
+        < &pro_micro 0x5 0x20 >,  /* row 1 - unchanged */
+        < &pro_micro 0x6 0x20 >,  /* row 2 - unchanged */
+        < &gpio0     0x8 0x20 >;  /* row 3 - NEW: P0.08 */
+};
