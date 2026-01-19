@@ -2,7 +2,7 @@
 
 [![Build Status](https://github.com/johnseth97/corne/actions/workflows/build.yml/badge.svg)](https://github.com/johnseth97/corne/actions/workflows/build.yml)
 
-This is the firmware repository for my Corne 6×3+2 split keyboard, built with a [Typeractive](https://www.typeractive.xyz/) kit.
+This is the firmware repository for my Corne 6×3+2 split keyboard, built with a [Typeractive](https://www.typeractive.xyz/) kit
 
 The keyboard features:
 - A **nice!nano v2** microcontroller on each half
