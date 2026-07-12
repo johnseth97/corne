@@ -68,25 +68,25 @@ text.footer {
 }
 
 /* styling for combo tap, and key non-tap label text */
-text.combo, text.hold, text.shifted, text.left, text.right {
+text.combo, text.hold, text.shifted, text.left, text.right, text.tl, text.tr, text.bl, text.br {
     font-size: 11px;
 }
 
-text.hold {
+text.hold, text.bl, text.br {
     text-anchor: middle;
     dominant-baseline: auto;
 }
 
-text.shifted {
+text.shifted, text.tl, text.tr {
     text-anchor: middle;
     dominant-baseline: hanging;
 }
 
-text.left {
+text.left, text.tl, text.bl {
     text-anchor: start;
 }
 
-text.right {
+text.right, text.tr, text.br {
     text-anchor: end;
 }
 
@@ -314,11 +314,9 @@ path.combo { stroke: #7f7f7f; }
 </text>
 </g>
 <g class="combo combopos-0">
-<path d="M420,213 l-116,0" class="combo"/>
-<path d="M420,213 l116,0" class="combo"/>
-<rect rx="6" ry="6" x="406" y="200" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="304" y="206" width="28" height="26" class="combo"/>
 <a href="#Util">
-<text x="420" y="213" class="combo tap layer-activator">Util</text>
+<text x="318" y="219" class="combo tap layer-activator">Util</text>
 </a></g>
 </g>
 </g>
@@ -495,11 +493,9 @@ path.combo { stroke: #7f7f7f; }
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g class="combo combopos-0">
-<path d="M420,213 l-116,0" class="combo"/>
-<path d="M420,213 l116,0" class="combo"/>
-<rect rx="6" ry="6" x="406" y="200" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="304" y="206" width="28" height="26" class="combo"/>
 <a href="#Util">
-<text x="420" y="213" class="combo tap layer-activator">Util</text>
+<text x="318" y="219" class="combo tap layer-activator">Util</text>
 </a></g>
 </g>
 </g>
@@ -664,11 +660,9 @@ path.combo { stroke: #7f7f7f; }
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g class="combo combopos-0">
-<path d="M420,213 l-116,0" class="combo"/>
-<path d="M420,213 l116,0" class="combo"/>
-<rect rx="6" ry="6" x="406" y="200" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="304" y="206" width="28" height="26" class="combo"/>
 <a href="#Util">
-<text x="420" y="213" class="combo tap layer-activator">Util</text>
+<text x="318" y="219" class="combo tap layer-activator">Util</text>
 </a></g>
 </g>
 </g>
@@ -831,11 +825,9 @@ path.combo { stroke: #7f7f7f; }
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g class="combo combopos-0">
-<path d="M420,213 l-116,0" class="combo"/>
-<path d="M420,213 l116,0" class="combo"/>
-<rect rx="6" ry="6" x="406" y="200" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="304" y="206" width="28" height="26" class="combo"/>
 <a href="#Util">
-<text x="420" y="213" class="combo tap layer-activator">Util</text>
+<text x="318" y="219" class="combo tap layer-activator">Util</text>
 </a></g>
 </g>
 </g>
@@ -1036,27 +1028,25 @@ path.combo { stroke: #7f7f7f; }
 <g transform="translate(286, 213) rotate(15.0)" class="key held keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
 </g>
-<g transform="translate(351, 224) rotate(30.0)" class="key trans keypos-38">
-<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
-<text x="0" y="0" class="key trans tap">▽</text>
+<g transform="translate(351, 224) rotate(30.0)" class="key held keypos-38">
+<rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key held"/>
 </g>
 <g transform="translate(489, 224) rotate(-30.0)" class="key trans keypos-39">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
-<g transform="translate(554, 213) rotate(-15.0)" class="key held keypos-40">
-<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key held"/>
+<g transform="translate(554, 213) rotate(-15.0)" class="key trans keypos-40">
+<rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
+<text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g transform="translate(616, 205)" class="key trans keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key trans"/>
 <text x="0" y="0" class="key trans tap">▽</text>
 </g>
 <g class="combo combopos-0">
-<path d="M420,213 l-116,0" class="combo"/>
-<path d="M420,213 l116,0" class="combo"/>
-<rect rx="6" ry="6" x="406" y="200" width="28" height="26" class="combo"/>
+<rect rx="6" ry="6" x="304" y="206" width="28" height="26" class="combo"/>
 <a href="#Util">
-<text x="420" y="213" class="combo tap layer-activator">Util</text>
+<text x="318" y="219" class="combo tap layer-activator">Util</text>
 </a></g>
 </g>
 </g>
