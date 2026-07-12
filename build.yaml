@@ -18,3 +18,12 @@ include:
       snippet: zmk-usb-logging
     - board: nice_nano
       shield: corne_right nice_view_adapter nice_view
+    - board: nice_nano
+      shield: corne_left
+      artifact-name: corne_left-minimal
+      cmake-args: >-
+        -DCONFIG_ZMK_STUDIO=n
+        -DCONFIG_ZMK_POINTING=n
+        -DCONFIG_ZMK_USB_LOGGING=n
+        -DCONFIG_ZMK_BLE_EXPERIMENTAL_CONN=n
+        -DCONFIG_BT_CTLR_TX_PWR_PLUS_8=n
