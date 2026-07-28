@@ -1,6 +1,6 @@
 layout: {zmk_keyboard: corne}
 layers:
-  Base: [TAB, Q, W, E, R, T, Y, U, I, O, P, ESC, LCTRL, A, S, D, F, G, H, J, K, L, ;, BSPC, LEFT SHIFT, Z, X, C, V, B, N, M, ',', ., /, RIGHT SHIFT, LEFT GUI, FN/SYM,
+  Base: [TAB, Q, W, E, R, T, Y, U, I, O, P, ESC, LCTRL, A, S, D, F, G, H, J, K, L, ;, BSPC, LSHIFT, Z, X, C, V, B, N, M, ',', ., /, RIGHT SHIFT, LEFT GUI, FN/SYM,
     SPACE, ENTER, Num/Motion, LEFT ALT]
   FN/SYM:
   - F1
@@ -170,10 +170,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {type: held}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
 combos:
-- p: [37, 38]
+- p: [37, 40]
   k: Util
+  l: [Base]
