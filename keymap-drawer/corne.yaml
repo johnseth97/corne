@@ -1,7 +1,7 @@
 layout: {zmk_keyboard: corne}
 layers:
-  Base: [TAB, Q, W, E, R, T, Y, U, I, O, P, ESC, LCTRL, A, S, D, F, G, H, J, K, L, ;, BSPC, LEFT SHIFT, Z, X, C, V, B, N, M, ',', ., /, '&KP RIGHT_SHIFT', LEFT GUI,
-    FN/SYM, SPACE, ENTER, Num/Motion, LEFT ALT]
+  Base: [TAB, Q, W, E, R, T, Y, U, I, O, P, ESC, LCTRL, A, S, D, F, G, H, J, K, L, ;, BSPC, LEFT SHIFT, Z, X, C, V, B, N, M, ',', ., /, RIGHT SHIFT, LEFT GUI, FN/SYM,
+    SPACE, ENTER, Num/Motion, LEFT ALT]
   FN/SYM:
   - F1
   - F2
