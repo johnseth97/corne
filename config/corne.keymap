@@ -36,14 +36,14 @@
             compatible = "zmk,behavior-tap-dance";
             label = "RSHIFT2XCAPS";
             #binding-cells = <0>;
-            bindings = <&kp RIGHT_SHIFT>, <&kp CAPSLOCK>;
+            bindings = <&kp RIGHT_SHIFT>, <&none>, <&kp CAPS>;
         };
 
         LSHIFT2xCAPS: LSHIFT2xCAPS {
             compatible = "zmk,behavior-tap-dance";
             label = "LSHIFT2XCAPS";
             #binding-cells = <0>;
-            bindings = <&kp LEFT_SHIFT>, <&kp CAPSLOCK>;
+            bindings = <&kp LEFT_SHIFT>, <&none>, <&kp CAPS>;
         };
 
         n2xbld3xres: n2xbld3xres {
